@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Is a Surprise, Do you like Surprises?</title>
+<title>Is a Surprise, Do you like Suprises?</title>
 
 <style>
   body {
@@ -43,15 +43,15 @@
   }
 
   .no-btn {
-  font-size: 1rem;           /* bigger text */
-  padding: 10px 16px;        /* medium size button */
-  background: #999;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  position: absolute;
-}
+    font-size: 0.6rem;
+    padding: 5px 7px;
+    background: #999;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    position: absolute;
+  }
 
   /* 💕 Heart Rain */
   .heart {
@@ -74,16 +74,13 @@
 <body>
 
 <div class="container">
-  <h1> Will you be my val?,<br>
-  <span style="color:#ff2f92; font-weight:bold;">
-    Favour Aleke Sunday
-  </span> 
-💘</h1>
+  <h1>Will you be my val? 💘</h1>
   <button class="yes-btn" onclick="yesClick()">YES 💖</button>
   <button class="no-btn" id="noBtn">no</button>
 </div>
 
 <!-- 🔊 Sounds -->
+<audio id="loveSound" src="https://www.soundjay.com/human_c2026/sounds/applause-01.mp3" preload="auto"></audio>
 <audio id="moveSound" src="https://www.soundjay.com/button/sounds/button-10.mp3"></audio>
 
 <script>
@@ -100,15 +97,12 @@
   });
 
   // 💖 YES click
- function yesClick() {
-  const loveSound = document.getElementById("loveSound");
-  loveSound.play(); // plays applause sound
-
-  // Redirect to YES page with fireworks after 1.5 seconds
-  setTimeout(() => {
-    window.location.href = "yes.html";
-  }, 1500);
-}
+  function yesClick() {
+    document.getElementById("yesSound").play();
+    setTimeout(() => {
+      window.location.href = "yes.html";
+    }, 500);
+  }
 
   // 💕 Heart Rain
   function createHeart() {
@@ -127,10 +121,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
